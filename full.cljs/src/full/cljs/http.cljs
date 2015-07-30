@@ -3,7 +3,8 @@
             [ajax.core :refer [ajax-request
                                raw-response-format
                                json-request-format
-                               json-response-format]]))
+                               json-response-format]]
+            [full.cljs.log :as log]))
 
 (defn req>
   [{:keys [url method params headers request-format response-format]
@@ -17,9 +18,12 @@
                    :format request-format
                    :response-format response-format
                    :handler (fn [[ok res]]
-                              (put! ch res)
+                              (if ok
+                                (put! ch res)
+                                (put! ch (js/Error. res)))
                               (close! ch))})
     ch))
+
 
 (defn json-req>
   [req]
