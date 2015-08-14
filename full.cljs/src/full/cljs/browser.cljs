@@ -12,6 +12,12 @@
           .-location
           (set! url)))
 
+(defn hash
+      []
+      (-> js/document
+          .-location
+          .-hash))
+
 
 ;;; LOCAL STORAGE
 
