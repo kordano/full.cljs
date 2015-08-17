@@ -1,4 +1,4 @@
-(defproject fullcontact/full.cljs.async "0.1.2-SNAPSHOT"
+(defproject fullcontact/full.cljs.async "0.1.2"
   :description "Extensions and helpers for cljs.core.async."
 
   :url "https://github.com/fullcontact/full.cljs"
