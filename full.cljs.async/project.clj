@@ -13,21 +13,19 @@
                  [org.clojure/clojurescript "1.7.48"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]]
 
-  :plugins [[lein-cljsbuild "1.0.6"]
-            [com.cemerick/clojurescript.test "0.3.3"]]
+  :plugins [[lein-cljsbuild "1.0.6"]]
 
   :hooks [leiningen.cljsbuild]
-
-  :profiles {:dev {:plugins [[com.cemerick/clojurescript.test "0.3.3"]]}}
+  
+  :clean-targets ^{:protect false}["target" "resources/test/compiled.js"]
 
   :aliases {"autotest" ["do" "clean," "cljsbuild" "auto" "test"]}
 
-  :cljsbuild {:test-commands {"test" ["phantomjs" :runner "target/test.js"]}
+  :cljsbuild {:test-commands {"test" ["phantomjs"
+                                      "resources/test/test.js"
+                                      "resources/test/test.html"]}
               :builds [{:id "test"
-                        :notify-command ["phantomjs" :cljs.test/runner "target/test.js"]
-                        :source-paths ["src" "test"]
-                        :compiler {:output-to "target/test.js"
+                        :source-paths ["test"]
+                        :compiler {:output-to "resources/test/compiled.js"
                                    :optimizations :whitespace
-                                   :pretty-print true}}]
-              }
-  )
+                                   :pretty-print true}}]})
