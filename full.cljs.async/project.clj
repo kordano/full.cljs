@@ -1,4 +1,4 @@
-(defproject fullcontact/full.cljs.async "0.1.3-SNAPSHOT"
+(defproject kordano/full.cljs.async "0.1.3-alpha"
   :description "Extensions and helpers for cljs.core.async."
 
   :url "https://github.com/fullcontact/full.cljs"
@@ -7,7 +7,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"
             :distribution :repo}
 
-  :deploy-repositories [["releases" {:url "https://clojars.org/repo/" :creds :gpg}]]
+  ;:deploy-repositories [["releases" {:url "https://clojars.org/repo/" :creds :gpg}]]
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.48"]

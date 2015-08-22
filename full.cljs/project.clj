@@ -1,4 +1,4 @@
-(defproject fullcontact/full.cljs "0.1.3-SNAPSHOT"
+(defproject kordano/full.cljs "0.1.3-alpha"
   :description "ClojureScript sugar - logging, browser API's etc."
 
   :url "https://github.com/fullcontact/full.cljs"
@@ -12,3 +12,4 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.48"]
                  [cljs-ajax "0.3.13"]])
+

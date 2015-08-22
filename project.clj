@@ -1,7 +1,7 @@
-(defproject fullcontact/full.cljs.parent "0.1.3-SNAPSHOT"
+(defproject kordano/full.cljs.parent "0.1.3-alpha"
   :description "ClojureScript sugar (full.monty's little brother)."
 
-  :url "https://github.com/fullcontact/full.cljs"
+  :url "https://github.com/kordano/full.cljs"
 
   :license {:name "Eclipse Public License - v 1.0"
             :url "http://www.eclipse.org/legal/epl-v10.html"
