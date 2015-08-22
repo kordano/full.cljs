@@ -152,5 +152,7 @@
                                  [x y])))))
            (done))))
 
-
 (run-tests)
+
+(defn ^:export run [])
+

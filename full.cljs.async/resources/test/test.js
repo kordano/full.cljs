@@ -7,7 +7,7 @@ page.onConsoleMessage = function (message) {
 
 page.open(url, function (status) {
     page.evaluate(function(){
-        full.cljs.test_runner.run();
+        full.cljs.test_async.run();
     });
     phantom.exit(0);
 });
