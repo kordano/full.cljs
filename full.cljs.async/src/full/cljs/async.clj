@@ -1,14 +1,6 @@
 (ns full.cljs.async
   (:require [cljs.core.async.macros :refer [go go-loop]]))
 
-#(:cljs (defn throw-if-throwable
-          "Helper method that checks if x is JavaScript Error. If it is, throws it,
-  otherwise returns x."
-          [x]
-          (if (instance? js/Error x)
-            (throw x)
-            x)))
-
 (defmacro <?
   "Same as core.async <! but throws an exception if the channel returns a
   throwable object. Also will not crash if channel is nil."
